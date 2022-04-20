@@ -7,7 +7,7 @@ def index1(request):
     return HttpResponse('<u>Hello</u>') 
 
 def index2(request):
-    return HttpResponse('<u>Hello mp</u>')     
+    return render(request, 'mp/test1.html')    
 
 from tensorflow import keras
 from mp import modeltest
@@ -24,12 +24,12 @@ def mp_model(request):
 
     mp_words = modeltest.meadia_pipe(model1, actions1)
     
-    print(mp_words) 
+    #print(mp_words) 
     np_words2 = wtsmodel.new_text(mp_words)
-    print(np_words2)
+    #print(np_words2)
 
     sentence1 = wtsmodel.predict_mo(np_words2)
-    print(sentence1)  
+    #print(sentence1)  
 
-    return render(request, 'mp/test1.html',{ 'data': sentence1 })
+    return render(request, 'mp/test2.html',{ 'data': sentence1 })
 
