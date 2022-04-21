@@ -60,10 +60,10 @@ def new_text(text):
         return text
     return text
 
-mp_words = ['', '?', '오늘', '?', '날씨', '?', '맑다']
+#mp_words = ['', '?', '오늘', '?', '날씨', '?', '맑다']
 
-np_words2 = new_text(mp_words)
-print(np_words2)
+#np_words2 = new_text(mp_words)
+#print(np_words2)
 
-sentence1 = predict_mo(np_words2)
-print(sentence1)
+#sentence1 = predict_mo(np_words2)
+#print(sentence1)

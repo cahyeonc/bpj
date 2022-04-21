@@ -1,16 +1,9 @@
 import cv2
 import mediapipe as mp
 import numpy as np
-from tensorflow.keras.models import load_model
+from tensorflow import keras
+from keras.models import load_model
 from PIL import ImageFont, ImageDraw, Image
-
-actions1 = [
-    '오늘',
-    '날씨',
-    '맑다',
-          ]
-
-model1 = load_model("dataset/mediapipe_model.h5")
 
 def meadia_pipe(model, actions):
     seq_length = 30

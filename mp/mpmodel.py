@@ -1,11 +1,12 @@
 # 모델링
 
 import numpy as np
-from tensorflow.keras.layers import LSTM, Dense
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.backend import clear_session
-from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras.utils import to_categorical
+from tensorflow import keras
+from keras.layers import LSTM, Dense
+from keras.models import Sequential
+from keras.backend import clear_session
+from keras.callbacks import EarlyStopping
+from keras.utils import to_categorical
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 

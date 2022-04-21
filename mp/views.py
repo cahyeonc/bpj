@@ -12,6 +12,7 @@ def index2(request):
 from tensorflow import keras
 from mp import modeltest
 from mp import wtsmodel
+from mp.models import WToS 
 
 def mp_model(request):
 
@@ -31,5 +32,7 @@ def mp_model(request):
     sentence1 = wtsmodel.predict_mo(np_words2)
     #print(sentence1)  
 
-    return render(request, 'mp/test2.html',{ 'data': sentence1 })
+
+    #WToS.text.save(sentence1)
+    return render(request, 'mp/test2.html',{ 'data': sentence1 })#, 'text' : WToS.text })
 
