@@ -6,8 +6,8 @@ from django.http import HttpResponse
 def index1(request):
     return HttpResponse('<u>Hello</u>') 
 
-def index2(request):
-    return render(request, 'mp/test1.html')    
+# def index2(request):
+#     return render(request, 'mp/test1.html')    
 
 from tensorflow import keras
 from mp import modeltest
@@ -32,7 +32,11 @@ def mp_model(request):
     sentence1 = wtsmodel.predict_mo(np_words2)
     #print(sentence1)  
 
+    WToS(text=sentence1).save()
 
-    #WToS.text.save(sentence1)
     return render(request, 'mp/test2.html',{ 'data': sentence1 })#, 'text' : WToS.text })
+
+def show(request):
+    wtos = WToS.objects.all()
+    return render(request, 'mp/test1.html', { 'data': wtos })
 
