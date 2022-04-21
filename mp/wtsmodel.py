@@ -12,9 +12,9 @@ def sample(preds, temperature=1.0):
     return np.argmax(probas)     
 
 def predict_mo(lst):
-    reconstructed_model = keras.models.load_model("WTS_model.h5")
-    char_indices = json.load(open("char_indices.json","r"))
-    indices_char = json.load(open("indices_char.json","r"))   
+    reconstructed_model = keras.models.load_model("dataset/WTS_model.h5")
+    char_indices = json.load(open("dataset/char_indices.json","r"))
+    indices_char = json.load(open("dataset/indices_char.json","r"))   
     
     result =''
     
