@@ -20,6 +20,9 @@ import threading
 import cv2
 import mediapipe as mp
 import numpy as np
+from tensorflow import keras
+from keras.models import load_model
+from PIL import ImageFont, ImageDraw, Image
 
 class VideoCamera(object):
 
@@ -38,6 +41,7 @@ class VideoCamera(object):
         return jpeg.tobytes()
 
     def update(self): # 영상 실시간 처리
+        Text = [''] # 모션 텍스트
         seq_length = 30
         mp_hands = mp.solutions.hands
         mp_drawing = mp.solutions.drawing_utils
@@ -47,6 +51,13 @@ class VideoCamera(object):
             max_num_hands=2,
             min_detection_confidence=0.5,
             min_tracking_confidence=0.5)
+
+        actions = [
+            'today',
+            'weather',
+            'clear',
+            ]
+        model = load_model("dataset/mediapipe_model.h5")
 
         while True:
             self.grabbed, self.frame = self.video.read()
@@ -75,6 +86,48 @@ class VideoCamera(object):
                     d = np.concatenate([joint.flatten(), angle])
                     hand_arr.extend(d)
                     mp_drawing.draw_landmarks(self.frame, res, mp_hands.HAND_CONNECTIONS)
+
+                if len(hand_arr) == 99:
+                    hand_arr.extend(np.zeros(99))
+
+                if len(hand_arr) > 198:
+                    continue
+
+                seq.append(hand_arr)
+
+                if len(seq) < seq_length:
+                    continue
+
+                input_data = np.expand_dims(np.array(seq[-seq_length:], dtype=np.float32), axis=0)
+                y_pred = model.predict(input_data).squeeze()
+                i_pred = int(np.argmax(y_pred))
+                conf = y_pred[i_pred]
+                if conf < 0.9:
+                    continue
+
+                #print(i_pred)
+                action = actions[i_pred]
+                action_seq.append(action)
+                if len(action_seq) < 3:
+                    continue
+                this_action = '?'
+                if action_seq[-1] == action_seq[-2] == action_seq[-3]:
+                    this_action = action
+
+                cv2.putText(self.frame, text=this_action,
+                            org=(int(self.frame.shape[1] / 2), 100),
+                            fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+                            fontScale=2,
+                            color=(255, 255, 255),
+                            thickness=3)
+                # font = ImageFont.truetype("fonts/gulim.ttc", 20)
+                # self.frame = Image.fromarray(self.frame)
+                # draw = ImageDraw.Draw(self.frame)
+                # draw.text((30,50), this_action, font=font, fill=(0,0,255))
+                # self.frame = np.array(self.frame)
+
+                if Text[-1] != this_action :
+                    Text.append(this_action)
 
             #cv2.imshow('img', self.frame)
 
