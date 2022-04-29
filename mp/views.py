@@ -29,7 +29,7 @@ def mp_model(request):
         '아니다','안녕하세요','알다','없다','여자','오다','있다','잘','좋다','주다','타다',
         '끝', '무엇', '키우다', '우리', '단체', '번역', '만들다', '사랑합니다', '어디']
 
-    model = load_model("dataset/model_v5.h5")
+    model = load_model("dataset/model_0429_1010.h5")
 
     mp_words = modeltest.meadia_pipe(model, name)
     
