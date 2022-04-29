@@ -20,14 +20,17 @@ from mp.models import WToS
 
 def mp_model(request):
 
-    actions1 = [
-    '오늘',
-    '날씨',
-    '맑다',
-    ]
-    model1 = load_model("dataset/mediapipe_model.h5")
+    name = ['0','1','2','3','4','5','6','7','8','9','10','가렵다','개','공원','금요일','내년','내일','냄새나다',
+        '누나','동생','목요일','물','아래','바다','배고프다','병원','불','산','삼키다','선생님','수요일','아빠',
+        '아파트','앞','어제','어지러움','언니','엄마','오늘','오른쪽','오빠','올해','왼쪽','월요일','위에',
+        '음식물','일요일','자동차','작년','집','친구','택시','토요일','학교','형','화요일','화장실',
+        '가다','감사합니다','괜찮습니다','나','남자','내리다','당신','돕다','맞다',
+        '모르다','미안합니다','반드시','부탁합니다','빨리','수고','수화','슬프다','싫다',
+        '아니다','안녕하세요','알다','없다','여자','오다','있다','잘','좋다','주다','타다']
 
-    mp_words = modeltest.meadia_pipe(model1, actions1)
+    model = load_model("dataset/model_v5.h5")
+
+    mp_words = modeltest.meadia_pipe(model, name)
     
     #print(mp_words) 
     np_words2 = wtsmodel.new_text(mp_words)
@@ -43,6 +46,7 @@ def mp_model(request):
 def show(request):
     wtos = WToS.objects.all()
     return render(request, 'mp/test1.html', { 'data': wtos }) 
+
 
 # -------- 웹 스트리밍 부분 (아직 테스트 중--)
 
