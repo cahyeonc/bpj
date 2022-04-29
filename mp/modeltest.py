@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 from PIL import ImageFont, ImageDraw, Image
-
+import statistics
 import os
 from google.protobuf.json_format import MessageToDict
 
@@ -23,14 +23,10 @@ def meadia_pipe(model, actions):
         min_tracking_confidence=0.5)
 
     cap = cv2.VideoCapture(0)
-
-
-    seq = []
-    action_seq = []
+    seq, action_seq, sentences = [], [], []
 
     while cap.isOpened():
-        ret, img = cap.read()
-        img0 = img.copy()
+        _, img = cap.read()
 
         img = cv2.flip(img, 1)
         img = cv2.resize(img, dsize=(800,450))
@@ -109,15 +105,18 @@ def meadia_pipe(model, actions):
             draw = ImageDraw.Draw(img)
             draw.text((30,50), this_action, font=font, fill=(0,0,255))
             img = np.array(img)
-            
-            if Text[-1] != this_action :
-                Text.append(this_action)
+    
+        
+        else:
+            if len(action_seq) > 0:
+                sentences.append(statistics.mode(action_seq))
+            action_seq = []
 
         cv2.imshow('img', img)
         if cv2.waitKey(1) == ord('q'):
             cv2.destroyAllWindows()
             cap.release()
-            return Text
+            return sentences
     
 # mp_words = meadia_pipe(model1, actions1)
 # print(mp_words)    
