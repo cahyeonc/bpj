@@ -28,7 +28,7 @@ def meadia_pipe(model, actions):
         _, img = cap.read()
 
         img = cv2.flip(img, 1)
-        img = cv2.resize(img, dsize=(800,450))
+        img = cv2.resize(img, dsize=(500,500))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         result = hands.process(img)
         img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
@@ -99,10 +99,10 @@ def meadia_pipe(model, actions):
             if action_seq[-1] == action_seq[-2] == action_seq[-3]:
                 this_action = action
                 
-            font = ImageFont.truetype("fonts/gulim.ttc", 20)
+            font = ImageFont.truetype("fonts/HMFMMUEX", 40)
             img = Image.fromarray(img)
             draw = ImageDraw.Draw(img)
-            draw.text((30,50), this_action, font=font, fill=(0,0,255))
+            draw.text((30,50), this_action, font=font, fill=(255,255,255))
             img = np.array(img)
     
         
