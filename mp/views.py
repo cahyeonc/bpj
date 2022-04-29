@@ -10,9 +10,41 @@ def home(request):
     return render(request, 'mp/test3.html')    
 
 
+## ------------------ 웹캠 부분
 
+from tensorflow import keras
+from keras.models import load_model
+from mp import modeltest # 모델 테스트 함수
+from mp import wtsmodel
+from mp.models import WToS 
 
-# --------
+def mp_model(request):
+
+    actions1 = [
+    '오늘',
+    '날씨',
+    '맑다',
+    ]
+    model1 = load_model("dataset/mediapipe_model.h5")
+
+    mp_words = modeltest.meadia_pipe(model1, actions1)
+    
+    #print(mp_words) 
+    np_words2 = wtsmodel.new_text(mp_words)
+    #print(np_words2)
+
+    sentence1 = wtsmodel.predict_mo(np_words2)
+    #print(sentence1)  
+
+    WToS(text=sentence1).save()
+
+    return render(request, 'mp/test2.html',{ 'data': sentence1 })#, 'text' : WToS.text })
+
+def show(request):
+    wtos = WToS.objects.all()
+    return render(request, 'mp/test1.html', { 'data': wtos }) 
+
+# -------- 웹 스트리밍 부분 (아직 테스트 중--)
 
 from django.views.decorators import gzip
 from django.http import StreamingHttpResponse, JsonResponse
@@ -148,36 +180,5 @@ def detectme(request):
         pass
 
 
-## ----------------------------------
-from tensorflow import keras
-from keras.models import load_model
-from mp import modeltest
-from mp import wtsmodel
-from mp.models import WToS 
 
-def mp_model(request):
-
-    actions1 = [
-    '오늘',
-    '날씨',
-    '맑다',
-    ]
-    model1 = load_model("dataset/mediapipe_model.h5")
-
-    mp_words = modeltest.meadia_pipe(model1, actions1)
-    
-    #print(mp_words) 
-    np_words2 = wtsmodel.new_text(mp_words)
-    #print(np_words2)
-
-    sentence1 = wtsmodel.predict_mo(np_words2)
-    #print(sentence1)  
-
-    WToS(text=sentence1).save()
-
-    return render(request, 'mp/test2.html',{ 'data': sentence1 })#, 'text' : WToS.text })
-
-def show(request):
-    wtos = WToS.objects.all()
-    return render(request, 'mp/test1.html', { 'data': wtos }) 
 

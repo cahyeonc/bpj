@@ -12,13 +12,19 @@ def sample(preds, temperature=1.0):
     return np.argmax(probas)     
 
 def predict_mo(lst):
-    reconstructed_model = keras.models.load_model("dataset/WTS_model.h5")
+    model = keras.models.load_model("dataset/WTS_model.h5")
     char_indices = json.load(open("dataset/char_indices.json","r"))
     indices_char = json.load(open("dataset/indices_char.json","r"))   
     
     result =''
     
     for i in lst:
+
+        if char_indices.get(i) == None :
+            # 입력값이 모델학습데이터에 없을 때
+            result += i + '- '
+            continue
+
         if i[-1] == '요' or i[-1] == '다':
             result += i + ' '
             continue
@@ -26,10 +32,9 @@ def predict_mo(lst):
         x = np.zeros((1, 5, len(char_indices)))
         x[0, len(i), char_indices[i]] = 1.
 
-        preds = reconstructed_model.predict(x, verbose=0)[0]
+        preds = model.predict(x, verbose=0)[0]
         next_index = sample(preds)
         next_char = indices_char[str(next_index)]
-        
         
         #y = josa_fuc(i, next_char)
         result += (i + next_char + ' ')
