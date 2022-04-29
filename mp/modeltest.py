@@ -13,7 +13,6 @@ def meadia_pipe(model, actions):
 
     # actions = name
     seq_length = 20
-    Text = [''] # 모션 텍스트
 
     mp_hands = mp.solutions.hands
     mp_drawing = mp.solutions.drawing_utils
