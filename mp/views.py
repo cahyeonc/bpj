@@ -33,12 +33,12 @@ def mp_model(request):
 
     mp_words = modeltest.meadia_pipe(model, name)
     
-    #print(mp_words) 
-    np_words2 = wtsmodel.new_text(mp_words)
+    print(mp_words) 
+    #np_words2 = wtsmodel.new_text(mp_words)
     #print(np_words2)
 
-    sentence1 = wtsmodel.predict_mo(np_words2)
-    #print(sentence1)  
+    sentence1 = wtsmodel.predict_mo(mp_words)
+    print(sentence1)  
 
     WToS(text=sentence1).save()
 

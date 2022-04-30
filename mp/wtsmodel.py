@@ -1,7 +1,6 @@
 import numpy as np
 import json
 from tensorflow import keras
-#from pyjosa.josa import Josa # 조사 오픈소스
     
 def sample(preds, temperature=1.0):
     preds = np.asarray(preds).astype('float64')
@@ -13,8 +12,8 @@ def sample(preds, temperature=1.0):
 
 def predict_mo(lst):
     model = keras.models.load_model("dataset/WTS_model.h5")
-    char_indices = json.load(open("dataset/char_indices.json","r"))
-    indices_char = json.load(open("dataset/indices_char.json","r"))   
+    char_indices = json.load(open("dataset/ci_dic.json","r"))
+    indices_char = json.load(open("dataset/ic_dic.json","r"))   
     
     result =''
     
@@ -29,14 +28,17 @@ def predict_mo(lst):
             result += i + ' '
             continue
             
-        x = np.zeros((1, 5, len(char_indices)))
+        x = np.zeros((1, 20, len(char_indices)))
         x[0, len(i), char_indices[i]] = 1.
 
         preds = model.predict(x, verbose=0)[0]
         next_index = sample(preds)
-        next_char = indices_char[str(next_index)]
+        next_char = indices_char[str(next_index)] 
         
-        #y = josa_fuc(i, next_char)
+        # if next_char == '.':
+        #     result += i + ' '
+        #     continue
+
         result += (i + next_char + ' ')
         
     return result
