@@ -7,9 +7,9 @@
 ---
 👩‍🦰[김지윤](https://github.com/KimJY37) 👧[유정은](https://github.com/yoojeongeun) 🧑[박지수](https://github.com/pjs12) 👩[최아현](https://github.com/cahyeonc) 👦[한현수](https://github.com/indiaprince)
 
-# 수화 번역 서비스
+### 수화 번역 서비스
  
-### 주요기능
+#### 주요기능
 ---
 1. Webcam을 통해 수화를 인식하고 번역(예측) 및 텍스트화, 음성화, 점자화
 
@@ -19,18 +19,18 @@
 
 
 
-tool
+#### tool
 ---
 <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=Django&logoColor=white"/>
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/>
 <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/>
 
-개발 언어
+#### 언어
 ---
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
 
 
-사용한 라이브러리
+#### 라이브러리
 ---
 <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=TensorFlow&logoColor=white"/>
 <img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/>
