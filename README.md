@@ -23,3 +23,8 @@ Numpy
 Jupyter
 #F37626
 <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/>
+
+OpenCV
+#5C3EE8
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=OpenCV&logoColor=white"/>
+
