@@ -9,7 +9,7 @@
 
 장고
 #092E20 brightgreen
-<img src="https://img.shields.io/badge/이름-#092E20?style=flat-square&logo=로고명&logoColor=로고색"/>
+<img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=Django&logoColor=brightgreen"/>
 
 
 
