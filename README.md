@@ -1,5 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=openly%20relationship&fontSize=80)
-<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=openly%20relationship&fontSize=80" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=white&height=300&section=header&text=openly%20relationship&fontSize=70" />
 # bpj
 
 
