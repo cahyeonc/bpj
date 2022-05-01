@@ -1,5 +1,9 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=openly%20relationship&animation=twinkling&fontSize=70" />
-# bpj
+# 너나들이
+
+구성원
+[김지윤] [유정은] [박지수] [최아현](https://github.com/cahyeonc) [한현수]
+
 
 
 <img src="https://img.shields.io/badge/이름-색상코드?style=flat-square&logo=로고명&logoColor=로고색"/>
