@@ -5,17 +5,20 @@
 > 서로 __너니 나니__ 하고 부르며 허물없이 말을 건넴. 또는 그런 사이.
 <br/>
 <br/>
+
 ### 수화 번역 서비스
 
 서로 다른 언어를 사용하고 있어도 허물없이 대화할 수 있도록 도움을 주는 서비스 
 <br/>
 <br/>
+
 ### 구성원
 - __Web Service__ 👩‍🦰 [김지윤](https://github.com/KimJY37) 👦 [한현수](https://github.com/indiaprince)
 
 - __Modeling__ 👧 [유정은](https://github.com/yoojeongeun) 🧑 [박지수](https://github.com/pjs12) 👩 [최아현](https://github.com/cahyeonc)
 <br/>
 <br/>
+
 ### 주요기능
 
 1. Webcam을 통해 수화를 인식하고 번역(예측) 및 텍스트화, 음성화, 점자화
@@ -23,6 +26,7 @@
 2. 수어, 점자 커뮤니티와 서비스 Q&A 
 <br/>
 <br/>
+
 ### ERD
 <img src="/img/img1.jpg"  width="300" height="150">
 
