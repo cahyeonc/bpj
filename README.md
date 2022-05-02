@@ -1,12 +1,16 @@
+<p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=intimate%20relationship&animation=twinkling&fontSize=70" />
+</p>
 
+<div align="center">
+ 
 # 너나들이 
 > 서로 __너니 나니__ 하고 부르며 허물없이 말을 건넴. 또는 그런 사이.
 
 ### 구성원
-> Web Service 👩‍🦰 [김지윤](https://github.com/KimJY37) 👦 [한현수](https://github.com/indiaprince)
+- __Web Service__ 👩‍🦰 [김지윤](https://github.com/KimJY37) 👦 [한현수](https://github.com/indiaprince)
 
-> Modeling 👧 [유정은](https://github.com/yoojeongeun) 🧑 [박지수](https://github.com/pjs12) 👩 [최아현](https://github.com/cahyeonc)
+- __Modeling__ 👧 [유정은](https://github.com/yoojeongeun) 🧑 [박지수](https://github.com/pjs12) 👩 [최아현](https://github.com/cahyeonc)
 
 ### 수화 번역 서비스
  
@@ -15,10 +19,6 @@
 
 2. 수어, 점자 커뮤니티와 서비스 Q&A 
 
-
-
-
-<div align="center">
  
 #### 🔨tool🔨 
 
