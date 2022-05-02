@@ -1,16 +1,15 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=intimate%20relationship&animation=twinkling&fontSize=70" />
 
 # 너나들이 
-#### 서로 너니 나니 하고 부르며 허물없이 말을 건넴. 또는 그런 사이.
+>> 서로 __너니 나니__ 하고 부르며 허물없이 말을 건넴. 또는 그런 사이.
 
-구성원
----
-👩‍🦰[김지윤](https://github.com/KimJY37) 👧[유정은](https://github.com/yoojeongeun) 🧑[박지수](https://github.com/pjs12) 👩[최아현](https://github.com/cahyeonc) 👦[한현수](https://github.com/indiaprince)
+### 구성원
+>> Web Service 👩‍🦰 [김지윤](https://github.com/KimJY37) 👦 [한현수](https://github.com/indiaprince)
+>> Modeling 👧 [유정은](https://github.com/yoojeongeun) 🧑 [박지수](https://github.com/pjs12) 👩 [최아현](https://github.com/cahyeonc)
 
 ### 수화 번역 서비스
  
 #### 주요기능
----
 1. Webcam을 통해 수화를 인식하고 번역(예측) 및 텍스트화, 음성화, 점자화
 
 2. 수어, 점자 커뮤니티와 서비스 Q&A 
@@ -29,7 +28,7 @@
 
 #### 언어
 ---
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
 
 ### 프레임워크
 ---
@@ -38,4 +37,4 @@
 #### 라이브러리
 ---
 <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=TensorFlow&logoColor=white"/> <img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=OpenCV&logoColor=white"/>
-
+<img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
