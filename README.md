@@ -23,7 +23,7 @@
 
 ### 주요기능
 <div align="center"> 
- <img src="/img/img2.JPG"  width="450" height="300">
+ <img src="/img/img2.JPG"  width="450" height="200">
 </div>
 
 ```
@@ -36,7 +36,7 @@
 
 ### ERD
 <div align="center"> 
- <img src="/img/img1.jpg"  width="450" height="300">
+ <img src="/img/img1.jpg"  width="450" height="200">
 </div>
 
 
