@@ -49,7 +49,7 @@
 
 ### UIUX
 <div align="center"> 
- <img src="/img/img3.png"  width="800" height="300">
+ <img src="/img/img3.png"  width="700" height="250">
 </div>
 
 <br/>
