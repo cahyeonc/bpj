@@ -1,7 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=auto&amp;height=300&amp;section=header&amp;text=Intimate%20relationship&amp;fontSize=70&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=Sign%20Language%20Translation%20Service!&amp;descAlignY=51&amp;descAlign=62" style="max-width: 100%;" />
 
 
-## 너나들이 
+너나들이 
 ========
 > 서로 __너니 나니__ 하고 부르며 허물없이 말을 건넴. 또는 그런 사이.
 <br/>
@@ -22,13 +22,13 @@
 <br/>
 
 ### 주요기능
-
+'''
  1. Webcam을 통해 수화를 인식하고 번역(예측) 및 텍스트화, 음성화, 점자화
 
 <img src="/img/img2.jpg"  width="450" height="300">
 
  2. 수어, 점자 커뮤니티와 서비스 Q&A 
-
+'''
 <br/>
 <br/>
 
