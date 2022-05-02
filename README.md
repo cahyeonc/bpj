@@ -17,9 +17,9 @@
 <br/>
 
 __구성원__ 
-- 수도권 1반 2조 
- * __Web Service__ 👩‍🦰 [김지윤](https://github.com/KimJY37) 👦 [한현수](https://github.com/indiaprince)
- * __Modeling__ 👧 [유정은](https://github.com/yoojeongeun) 🧑 [박지수](https://github.com/pjs12) 👩 [최아현](https://github.com/cahyeonc)
+수도권 1반 2조 
+* __Web Service__ 👩‍🦰 [김지윤](https://github.com/KimJY37) 👦 [한현수](https://github.com/indiaprince)
+* __Modeling__ 👧 [유정은](https://github.com/yoojeongeun) 🧑 [박지수](https://github.com/pjs12) 👩 [최아현](https://github.com/cahyeonc)
 
 <br/>
 <br/>
