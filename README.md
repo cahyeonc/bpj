@@ -1,10 +1,8 @@
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=intimate%20relationship&animation=twinkling&fontSize=70" />
+<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=intimate%20relationship&animation=twinkling&fontSize=70" />
 </p>
 
-<div align="center">
- 
-# 너나들이 
+## 너나들이 
 > 서로 __너니 나니__ 하고 부르며 허물없이 말을 건넴. 또는 그런 사이.
 
 ### 구성원
@@ -19,7 +17,7 @@
 
 2. 수어, 점자 커뮤니티와 서비스 Q&A 
 
- 
+<div align="center"> 
 #### 🔨tool🔨 
 
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/> <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/> <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
