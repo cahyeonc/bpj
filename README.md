@@ -8,9 +8,9 @@
 <br/>
 
 ### 수화 번역 서비스
-
+```
  서로 다른 언어를 사용하고 있어도 허물없이 대화할 수 있도록 도움을 주는 서비스
- 
+ ```
 <br/>
 <br/>
 
@@ -22,18 +22,20 @@
 <br/>
 
 ### 주요기능
-'''
+```
  1. Webcam을 통해 수화를 인식하고 번역(예측) 및 텍스트화, 음성화, 점자화
 
-<img src="/img/img2.jpg"  width="450" height="300">
+<img src="/img/img2.JPG"  width="450" height="300">
 
  2. 수어, 점자 커뮤니티와 서비스 Q&A 
-'''
+```
 <br/>
 <br/>
 
 ### ERD
-<img src="/img/img1.jpg"  width="450" height="300">
+<div align="center"> 
+ <img src="/img/img1.jpg"  width="450" height="300">
+</div>
 
 
 <br/>
@@ -63,6 +65,6 @@
  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=TensorFlow&logoColor=white"/> <img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=OpenCV&logoColor=white"/>
  <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
  
- <div align="center"> 
- </div>
+<div align="center"> 
+</div>
 
