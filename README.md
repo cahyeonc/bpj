@@ -2,6 +2,8 @@
  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=intimate%20render&relationship&fontSize=70" />
 </p>
 
+<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90" />
+
 ## 너나들이 
 > 서로 __너니 나니__ 하고 부르며 허물없이 말을 건넴. 또는 그런 사이.
 
