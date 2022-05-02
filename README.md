@@ -22,10 +22,12 @@
 <br/>
 
 ### 주요기능
+<div align="center"> 
+ <img src="/img/img2.JPG"  width="450" height="300">
+</div>
+
 ```
  1. Webcam을 통해 수화를 인식하고 번역(예측) 및 텍스트화, 음성화, 점자화
-
-<img src="/img/img2.JPG"  width="450" height="300">
 
  2. 수어, 점자 커뮤니티와 서비스 Q&A 
 ```
