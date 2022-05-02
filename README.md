@@ -1,6 +1,5 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=auto&amp;height=300&amp;section=header&amp;text=Intimate%20relationship&amp;fontSize=70&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=Sign%20Language%20Translation%20Service!&amp;descAlignY=51&amp;descAlign=62" style="max-width: 100%;" />
 
-<br/>
 
 너나들이 
 ========
@@ -21,7 +20,7 @@ __구성원__ 수도권 1반 2조
 - __Web Service__ 👩‍🦰 [김지윤](https://github.com/KimJY37) 👦 [한현수](https://github.com/indiaprince)
 
 - __Modeling__ 👧 [유정은](https://github.com/yoojeongeun) 🧑 [박지수](https://github.com/pjs12) 👩 [최아현](https://github.com/cahyeonc)
-- 
+
 <br/>
 <br/>
 
