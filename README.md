@@ -28,7 +28,7 @@
 
 
 ### ERD
-<img src="/img/img1.jpg"  width="700" height="370">
+<img src="/img/img1.jpg"  width="300" height="150">
 
 
 🔨 
