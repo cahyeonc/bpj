@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=intimate%20relationship&animation=twinkling&fontSize=70" />
+ <img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=intimate%20relationship&fontSize=70" />
 </p>
 
 ## 너나들이 
