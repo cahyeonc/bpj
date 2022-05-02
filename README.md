@@ -24,7 +24,7 @@
 
 ### 주요기능
 <div align="center"> 
- <img src="/img/img2.JPG"  width="450" height="200">
+ <img src="/img/img2.JPG"  width="500" height="200">
 </div>
 
 ```
@@ -47,7 +47,7 @@
 
 ### UIUX
 <div align="center"> 
- <img src="/img/img3.png"  width="700" height="300">
+ <img src="/img/img3.png"  width="750" height="400">
 </div>
 
 -------
