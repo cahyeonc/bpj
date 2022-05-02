@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Intimate%20relationship&fontSize=70" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=320&section=header&text=Intimate%20relationship&fontSize=60" />
 
 ## 너나들이 
 > 서로 __너니 나니__ 하고 부르며 허물없이 말을 건넴. 또는 그런 사이.
@@ -34,6 +34,4 @@
 <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
  
  </div>
- 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Intimate%20relationship&fontSize=70" />
 
