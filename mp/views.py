@@ -360,7 +360,9 @@ def signlanguage(request):
         cam = VideoCamera()
         if status == 'false':
             cam.__del__()
-            return JsonResponse({})
+            # translated_sentence = '안녕하세요'
+            # print(translated_sentence)
+            return JsonResponse({'data' : translated_sentence})
         return StreamingHttpResponse(gen(cam), content_type="multipart/x-mixed-replace;boundary=frame")
     except:
         print("error")
