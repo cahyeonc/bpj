@@ -80,9 +80,6 @@ def home(request):
 class VideoCamera(object):
     # global translated_sentence
     def __init__(self): # 초기선언, 환경
-        # self.video = cv2.VideoCapture(0) # 카메라에서 정보를 받아옴
-        # (self.grabbed, self.frame) = self.video.read()
-        # threading.Thread(target=self.update, args=()).start()
         self.video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
     def __del__(self):
@@ -90,18 +87,13 @@ class VideoCamera(object):
         #cv2.destroyallwindows()
         return 
 
+    # 영상을 jpeg로 인코딩하여, yield로 호출한 URL로 실시간으로 바이너리를 전송
     def get_frame(self, model, actions, seq_length, mp_hands, mp_drawing, hands, seq, action_seq, sentences):
         global translated_sentence
-        # image = self.frame
-        # _, jpeg = cv2.imencode('.jpg', image)
-        # # 영상을 jpeg로 인코딩하여, yield로 호출한 URL로 실시간으로 바이너리를 전송
-        # return jpeg.tobytes()
         
-
         ret, image = self.video.read()
 
         if ret:
-            # ret, jpeg =  cv2.imencode('.jpg', image)
             ret, image = self.video.read()
             image = cv2.flip(image, 1) 
             result = hands.process(image)
@@ -156,7 +148,6 @@ class VideoCamera(object):
                 if conf < 0.8:
                     return None
                     
-
                 action = actions[i_pred]
                 action_seq.append(action)
 
@@ -175,6 +166,7 @@ class VideoCamera(object):
             else:
                 if len(action_seq) > 0:
                     sentences.append(statistics.mode(action_seq))
+                    print(sentences)
                     translated_sentence = sentences
                 action_seq = []
 
@@ -301,11 +293,6 @@ class VideoCamera(object):
         return 0
 
 def gen(camera): # 영상 바이너리 코드를 실시간으로 처리
-    # while True:
-    #     frame = self.get_frame()
-    #     yield(b'--frame\r\n'
-    #           b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-
     model = load_model("dataset/slt_model.h5")
     actions = ['0','1','2','3','4','5','6','7','8','9','10','가렵다','개','공원','금요일','내년','내일','냄새나다',
                 '누나','동생','수화','물','아래','바다','배고프다','병원','불','산','삼키다','선생님','수요일','아빠',
@@ -351,49 +338,3 @@ def signlanguage(request):
     except:
         print("error")
         pass
-
-
-# -- 지윤님 코드
-# class VideoCamera(object):
-
-#     def __init__(self):
-#         self.video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-
-#     # 카메라 정지
-#     def __del__(self):
-#         self.video.release()
-#         #cv2.destroyallwindows()
-#         return
-
-#     # 영상을 jpg 바이너리로 변환하여 리턴
-#     def get_frame(self):
-#         ret, image = self.video.read()
-#         if ret:
-#             ret, jpeg =  cv2.imencode('.jpg', image)
-#             return jpeg.tobytes()
-#         return None
-
-# def gen(camera):
-#     while True:
-#         frame = camera.get_frame()
-#         if frame:
-#             yield(b'--frame\r\n'
-#             b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-#         else:
-#             return
-
-# @gzip.gzip_page
-# def signlanguage(request):
-#     global translated_sentence
-#     try:
-#         status = request.GET.get('status')
-#         cam = VideoCamera()
-#         if status == 'false':
-#             cam.__del__()
-#             return JsonResponse({})
-#         return StreamingHttpResponse(gen(cam), content_type="multipart/x-mixed-replace;boundary=frame")
-#     except:
-#         print("error")
-#         pass
-
-    
