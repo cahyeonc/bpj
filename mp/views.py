@@ -74,6 +74,11 @@ translated_sentence = []
 action_seq = []
 
 def home(request):
+
+    print(translated_sentence)
+    sentence = wtsmodel.predict_mo(translated_sentence)
+    print(sentence)  
+
     context = {'data' : translated_sentence}
     
     return render(request, 'mp/test3.html', context)
@@ -95,6 +100,7 @@ class VideoCamera(object):
 
         ret, image = self.video.read()
         if ret:
+
             image = cv2.flip(image, 1) 
             result = hands.process(image)
 
@@ -223,7 +229,12 @@ def signlanguage(request):
         cam = VideoCamera()
         if status == 'false':
             cam.__del__()       
-            return JsonResponse({'data' : translated_sentence })
+
+            print(translated_sentence)
+            sentence = wtsmodel.predict_mo(translated_sentence)
+            print(sentence)  
+
+            return JsonResponse({'data' : sentence })
         return StreamingHttpResponse(gen(cam), content_type="multipart/x-mixed-replace;boundary=frame")
     except:
         print("error")

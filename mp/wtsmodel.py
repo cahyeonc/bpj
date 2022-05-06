@@ -35,9 +35,9 @@ def predict_mo(lst):
         next_index = sample(preds)
         next_char = indices_char[str(next_index)] 
         
-        # if next_char == '.':
-        #     result += i + ' '
-        #     continue
+        if next_char == '.':
+            result += i + ' '
+            continue
 
         result += (i + next_char + ' ')
         
